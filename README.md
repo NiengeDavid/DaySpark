@@ -1,3 +1,45 @@
+# DaySpark
+
+DaySpark is a social media web application built with React and integrated with Sanity CMS. It allows users to share spontaneous moments from their day with friends, fostering connections through shared experiences.
+
+## Features
+
+- **Moment Sharing**: Snap and share moments from your day in real-time with your friends.
+- **React Framework**: Built using React for a fast and responsive user interface.
+- **Sanity CMS Integration**: Seamlessly integrated with Sanity CMS for efficient content management and scalability.
+- **User Authentication**: Secure user authentication system to ensure privacy and data protection.
+- **Interactive Interface**: Engage with friends' posts through likes, comments, and sharing options.
+- **Customizable Profiles**: Personalize your profile with custom avatars and bio information.
+
+## Installation
+
+To run DaySpark locally, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Install dependencies by running `npm install`.
+4. Start the development server with `npm start`.
+5. Open `http://localhost:3000` in your web browser to view the application.
+
+## Contributing
+
+We welcome contributions from the community! If you'd like to contribute to DaySpark, please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature (`git checkout -b feature/new-feature`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/new-feature`).
+5. Create a new Pull Request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+For any inquiries or feedback, please contact [davidnienge@gmail.com](mailto:davidnienge@gmail.com).
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

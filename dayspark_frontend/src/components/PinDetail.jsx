@@ -59,9 +59,10 @@ const PinDetail = ({ user }) => {
   }
 
   useEffect(() => {
-    // eslint-disable-next-line
     fetchPinDetails();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pinId])
+  
   
   if(!pinDetail) return <Spinner message="Loading pin..." />
 

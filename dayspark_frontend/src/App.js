@@ -12,7 +12,7 @@ const App = () => {
     const user = fetchUser();
 
     if(!user) navigate('/login');
-  }, [])
+  }, [navigate])
   
 
   return (

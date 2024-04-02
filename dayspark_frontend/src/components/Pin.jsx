@@ -15,7 +15,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
 
     const user = fetchUser();
 
-    const alreadySaved = !!(save?.filter((item) => item.postedBy._id === user.sub))?.length;
+    const alreadySaved = !!(save?.filter((item) => item.postedBy._id === user?.sub))?.length;
     
     // 1, [2, 3, 1] -> [1].length -> 1 -> !1 -> false -> !false -> true
     // 4, [2, 3, 1] -> [].length -> 0 -> !0 -> true -> !true -> false
@@ -27,10 +27,10 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                 .setIfMissing({ save: [] })
                 .insert('after', 'save[-1]', [{
                     _key: uuidv4(),
-                    userId: user.sub,
+                    userId: user?.sub,
                     postedBy: {
                         _type: 'postedBy',
-                        _ref: user.sub
+                        _ref: user?.sub
                     }
                 }])
                 .commit()
@@ -79,7 +79,8 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                                     onClick={(e) => {
                                         e.stopPropagation();
                                     }}
-                                    type='button' className='bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none'>
+                                    type='button' 
+                                    className='bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none'>
                                     {save?.length} Saved
                                 </button>
                             ): (
@@ -88,7 +89,8 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                                         e.stopPropagation();
                                         savePin(_id);
                                     }}
-                                    type='button' className='bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none' >
+                                    type='button' 
+                                    className='bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none' >
                                     Save
                                 </button>
                             )}
@@ -105,7 +107,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                                     {destination.length > 15 ? `${destination.slice(0, 15)}...` : destination}
                                 </a>
                             )}
-                            {postedBy?._id === user.sub && (
+                            {postedBy?._id === user?.sub && (
                                 <button
                                     onClick={(e) => {
                                         e.stopPropagation();

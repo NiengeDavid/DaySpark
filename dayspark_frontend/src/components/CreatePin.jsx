@@ -69,7 +69,7 @@ const CreatePin = ({ user }) => {
       async function createAndNavigate() {
         try {
             await client.create(doc); // Wait for post creation
-            await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for 2 llllseconds
+            await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5 llllseconds
             navigate('/');
         } catch (error) {
             console.error('Error:', error);
